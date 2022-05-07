@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".search">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/bar_search"
+        android:layout_height="wrap_content"
+        android:background="@color/bleureader"
+        android:orientation="vertical">
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="0dp"
+
+
+            >
+
+            <ImageView
+                android:id="@+id/back_button000"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
+            <EditText
+                android:id="@+id/search_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:ems="10"
+                android:hint="title/isbn"
+                android:inputType="textPersonName" />
+            <ImageView
+                android:id="@+id/search_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_baseline_search_24" />
+
+            <ImageView
+                android:id="@+id/scan_code"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/barcodescan" />
+            <ImageView
+                android:id="@+id/more_datail"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_baseline_filter_list_24" />
+
+
+
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/author_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="author : "
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/publisher_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="publisher : "
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/category_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="category : "
+            android:visibility="gone"/>
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_of_books"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/bar_search"
+        android:layout_marginTop="0dp" />
+
+    <ProgressBar
+        android:id="@+id/idLoadingPB"
+        android:layout_below="@id/list_of_books"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+
+
+
+</RelativeLayout>

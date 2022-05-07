@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".user.singin">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical"
+       android:gravity="center">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/iconapp"
+
+            />
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_margin="20dp"
+           android:elevation="15dp"
+           android:background="@drawable/back_ground"
+           android:layout_height="wrap_content"
+           android:padding="20dp"
+           android:orientation="vertical"
+           android:gravity="center"
+           >
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:orientation="vertical"
+               android:layout_height="wrap_content">
+               <TextView
+
+                   android:layout_width="wrap_content"
+                   android:textSize="20sp"
+
+                   android:layout_height="wrap_content"
+                   android:text="username"
+
+                   />
+               <EditText
+
+                   android:id="@+id/txtusername"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:ems="10"
+                   android:hint="username"
+                   android:inputType="textPersonName"
+
+                   />
+           </LinearLayout>
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:orientation="vertical"
+               android:layout_height="wrap_content">
+               <TextView
+
+                   android:layout_width="wrap_content"
+                   android:textSize="20sp"
+                   android:layout_height="wrap_content"
+                   android:text="Email  "
+
+                   />
+
+               <EditText
+                   android:id="@+id/txtemail"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+
+                   android:hint="email"
+                   android:inputType="textEmailAddress"
+
+                   app:layout_constraintVertical_bias="0.453" />
+           </LinearLayout>
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:orientation="vertical"
+               android:layout_height="wrap_content">
+
+               <TextView
+
+                   android:layout_width="wrap_content"
+                   android:textSize="20sp"
+                   android:layout_height="wrap_content"
+
+                   android:text="Phone number"
+
+                   />
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+
+                   <com.hbb20.CountryCodePicker
+                       android:id="@+id/ccp"
+                       android:layout_width="0dp"
+                       android:layout_weight="0.2"
+                       android:layout_height="match_parent"
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       app:layout_constraintLeft_toLeftOf="parent"
+                       app:layout_constraintRight_toRightOf="parent"
+                       app:layout_constraintTop_toTopOf="parent"
+                       app:ccp_defaultNameCode="MA"
+
+                       />
+
+                   <EditText
+                       android:id="@+id/txtphone"
+                       android:layout_width="0dp"
+                       android:layout_weight=".4"
+                       android:layout_height="wrap_content"
+                       android:ems="10"
+
+                       android:hint="phone number"
+                       android:inputType="number" />
+
+
+
+               </LinearLayout>
+
+
+           </LinearLayout>
+
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:orientation="vertical"
+               android:layout_height="wrap_content"
+               >
+               <TextView
+
+                   android:layout_width="wrap_content"
+                   android:textSize="20sp"
+                   android:layout_height="wrap_content"
+                   android:text="password"
+                   />
+
+               <EditText
+                   android:id="@+id/txtpassword"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:inputType="textPassword"
+                   android:hint="password"
+                   />
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textSize="20sp"
+                   android:text="confirm"/>
+               <EditText
+                   android:id="@+id/confirmPassword"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:inputType="textPassword"
+                   android:hint="password"
+                   />
+           </LinearLayout>
+
+
+           <Button
+               android:id="@+id/valider"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+                android:ems="15"
+               android:text="sing up" />
+       </LinearLayout>
+
+
+   </LinearLayout>
+
+
+</ScrollView>

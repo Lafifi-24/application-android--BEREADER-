@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".recommende">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:background="@color/bleureader">
+            <ImageView
+                android:id="@+id/retor"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_baseline_arrow_back_24"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:textSize="25dp"
+                android:text="BE READER"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="20dp"
+            android:background="@drawable/back_ground"
+            android:elevation="13dp">
+            <LinearLayout
+                android:id="@+id/book2"
+                android:layout_width="0dp"
+                android:layout_weight="0.5"
+                android:layout_height="match_parent"
+                android:gravity="left"
+                android:padding="10dp"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/imagebook2"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@drawable/false1"/>
+                <TextView
+                    android:id="@+id/titlebook2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="title"
+                    android:layout_gravity="center"
+                    android:textSize="20dp"
+                    android:maxLines="2"
+                    android:ellipsize="end"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/book1"
+                android:layout_width="0dp"
+                android:layout_weight="0.5"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:gravity="right"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/imagebook1"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@drawable/false1"/>
+                <TextView
+                    android:id="@+id/titlebook1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="title"
+                    android:textSize="20dp"
+                    android:layout_gravity="center"
+                    android:maxLines="2"
+                    android:ellipsize="end"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="30dp"
+            android:orientation="vertical">
+            <EditText
+                android:id="@+id/commentrecommand"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="comment"/>
+            <Button
+                android:id="@+id/validrecommend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="validate"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</ScrollView>
